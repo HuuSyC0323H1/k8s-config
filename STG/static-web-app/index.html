@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CloudStage - Modern Static Web Platform</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">Cloud<span class="accent">Stage</span></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#features">Tính năng</a></li>
+          <li><a href="#architecture">Kiến trúc</a></li>
+          <li><a href="#status">Hệ thống</a></li>
+          <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Đổi giao diện Sáng/Tối" title="Đổi giao diện">
+          <span class="theme-icon" id="themeIcon">🌙</span>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Mở Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span> Môi trường Staging (STG) Sẵn sàng
+      </div>
+      <h1 class="hero-title">
+        Nền Tảng Ứng Dụng Web <br>
+        <span class="gradient-text">Hiện Đại & Linh Hoạt</span>
+      </h1>
+      <p class="hero-description">
+        Website tĩnh được tối ưu hóa hiệu năng cao, thiết kế đáp ứng (responsive), sẵn sàng tích hợp container hóa Docker và triển khai Kubernetes.
+      </p>
+      <div class="hero-buttons">
+        <a href="#features" class="btn btn-primary">Khám phá ngay</a>
+        <a href="#contact" class="btn btn-secondary">Trải nghiệm Demo</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <h3 class="stat-value">99.99%</h3>
+          <p class="stat-label">Thời gian uptime</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <h3 class="stat-value">&lt; 50ms</h3>
+          <p class="stat-label">Độ trễ phản hồi</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <h3 class="stat-value">Light & Dark</h3>
+          <p class="stat-label">Chế độ giao diện</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Đặc Điểm Nổi Bật</h2>
+        <p class="section-subtitle">Được cấu hình tối ưu để phục vụ cả môi trường cục bộ và production / staging cluster.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🚀</div>
+          <h3 class="feature-title">Tối Ưu Tốc Độ</h3>
+          <p class="feature-text">Trang web tĩnh thuần HTML5/CSS3/ES6 không phụ thuộc thư viện nặng nề, tải ngay tức thì.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <h3 class="feature-title">Chuẩn Responsive</h3>
+          <p class="feature-text">Giao diện tương thích hoàn hảo trên mọi thiết bị: Desktop, Tablet, và Mobile.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3 class="feature-title">Dark & Light Mode</h3>
+          <p class="feature-text">Hỗ trợ chuyển đổi chủ đề màu sắc sáng/tối tự động lưu vào LocalStorage.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🐳</div>
+          <h3 class="feature-title">Sẵn Sàng Docker & K8s</h3>
+          <p class="feature-text">Kèm sẵn Dockerfile và cấu hình Nginx Alpine siêu nhẹ (dưới 25MB) để deploy Kubernetes.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3 class="feature-title">An Toàn & Ổn Định</h3>
+          <p class="feature-text">Không có lỗ hổng backend động, bảo mật tối đa, dễ dàng cache qua CDN / Ingress.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚙️</div>
+          <h3 class="feature-title">Dễ Dàng Tùy Biến</h3>
+          <p class="feature-text">Cấu trúc thư mục sạch sẽ, mã nguồn tài liệu hóa rõ ràng, dễ dàng mở rộng theo yêu cầu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture / Technical Section -->
+  <section class="section architecture-section" id="architecture">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Thông Số Kỹ Thuật</h2>
+        <p class="section-subtitle">Cấu trúc công nghệ sử dụng trong gói static web này</p>
+      </div>
+
+      <div class="arch-box">
+        <div class="arch-col">
+          <span class="badge">Front-end</span>
+          <h3>Giao Diện & Script</h3>
+          <ul class="arch-list">
+            <li><strong>Ngôn ngữ:</strong> HTML5, Semantic Elements</li>
+            <li><strong>Định kiểu:</strong> Modern CSS3 (Variables, Flexbox, Grid)</li>
+            <li><strong>Font chữ:</strong> Plus Jakarta Sans</li>
+            <li><strong>Tương tác:</strong> Vanilla JavaScript (Zero Dependencies)</li>
+          </ul>
+        </div>
+        <div class="arch-col">
+          <span class="badge badge-accent">Deployment</span>
+          <h3>Triển Khai & Container</h3>
+          <ul class="arch-list">
+            <li><strong>Web Server:</strong> Nginx Alpine (nếu chạy Docker)</li>
+            <li><strong>Môi trường:</strong> STG (Staging)</li>
+            <li><strong>Cổng mặc định:</strong> 80 (HTTP)</li>
+            <li><strong>Khả năng scale:</strong> Horizontal Pod Autoscaler (HPA)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Contact / Demo Section -->
+  <section class="section" id="contact">
+    <div class="container contact-container">
+      <div class="section-header">
+        <h2 class="section-title">Gửi Lời Nhắn Thử Nghiệm</h2>
+        <p class="section-subtitle">Form tương tác với phản hồi trực quan ngay trên trang</p>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Họ và tên</label>
+          <input type="text" id="name" name="name" placeholder="Nguyễn Văn A" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Nội dung tin nhắn</label>
+          <textarea id="message" name="message" rows="4" placeholder="Nhập tin nhắn của bạn tại đây..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Gửi tin nhắn</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✅</span>
+    <span class="toast-message" id="toastMessage">Thành công!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 CloudStage. Được xây dựng cho môi trường STG.</p>
+      <div class="footer-links">
+        <a href="#features">Tính năng</a>
+        <a href="#architecture">Kiến trúc</a>
+        <a href="#">Lên đầu trang ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
