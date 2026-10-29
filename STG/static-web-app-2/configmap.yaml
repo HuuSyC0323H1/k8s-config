@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: st-api-content-config
+  namespace: core
+data:
+  SPRING_DATASOURCE_HIKARI_MAXIMUM_POOL_SIZE: "10"
+  SPRING_DATASOURCE_HIKARI_MINIMUM_IDLE: "2"
+  SPRING_DATASOURCE_HIKARI_MAX_LIFETIME: "300000"
+  SPRING_DATASOURCE_HIKARI_KEEPALIVE_TIME: "240000"
+  SPRING_DATASOURCE_HIKARI_IDLE_TIMEOUT: "300000"
+  SERVER_PORT: "8080"
+  SPRING_DATA_REDIS_CLUSTER_ENABLED: "true"
+  SPRING_DATA_REDIS_DATABASE: "1"
+  JAVA_TOOL_OPTIONS: "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005"
+
+  OTP_TEST: "false"
+  SPRING_JACKSON_TIME_ZONE: "Asia/Ho_Chi_Minh"
+  CONFIG_URL_BASE: "https://api-content.sentrip.vn/"
+  CONFIG_SHARE_URL: "https://landing-dev.vtvtravel.vn/smarttravel-download"
+  CONFIG_WEB_SHARE_URL: "https://web-testing.sentrip.vn/share?content_type"
+  TRAINING_AI_URL: "http://192.168.10.113:8386/api/v1/recsys/user/recommend"
+  CONFIG_URL_CONTENT_BASE: "https://api-content.sentrip.vn/api/v1/content/"
+  CONFIG_CDN_BASE: "https://cdn.sentrip.vn/cms/"
+  CONFIG_SHARE_URL: "https://landing-dev.vtvtravel.vn/smarttravel-download"
+  CONFIG_EXTERNAL_URL: "http://internal-gateway:9000"
+  CONFIG_EXTERNAL_TYPE_MAP: "MAP_BOX"
+  CONFIG_EXTERNAL_TYPE_COUNT: "50"
+  CONFIG_REGION_CONTENT_LINK_REGION: "${CONFIG_URL_BASE}api/v1/content/region/Info?regionId={regionId}&langCode={langCode}&lat={lat}&long={long}"
+  CONFIG_REGION_CONTENT_LINK_V3_REGION: "${CONFIG_URL_BASE}V3/region/Info?region_id={regionId}&lang_code={langCode}"
+  CONFIG_REGION_CONTENT_LINK_REGION_MENU: "${CONFIG_URL_BASE}api/v1/content/posts/index?contentType={contentType}&regionId={regionId}&lat={lat}&long={long}&langCode={langCode}"
+  CONFIG_REGION_LINK_REGION_MENU: "${CONFIG_URL_BASE}api/v1/content/nearBy?contentType={contentType}&langCode={langCode}&regionId={regionId}&lat={lat}&long={long}"
+  CONFIG_REGION_LIST_DATA_REGION: "${CONFIG_URL_BASE}api/v1/content/get-list-data-region?regionId={regionId}&lat={lat}&long={long}&langCode={langCode}&contentType={contentType}&regionIdByLocation={regionIdByLocation}"
+  CONFIG_REGION_DETAIL_LINK_CONTENT: "${CONFIG_URL_BASE}api/v1/content/detail?postId="
+
+  CONFIG_CONSTANT_CODE_REGION_DEFAULT: "hanoi"
+  CONFIG_CONSTANT_LAT_REGION_DEFAULT: "21.022696"
+  CONFIG_CONSTANT_LON_REGION_DEFAULT: "105.836963"
+  CONFIG_JWT_TOKEN_SECRET: "NamViet@2020"
+  CONFIG_HEADER_USER_TOKEN: "NVTRAVEL-TOKEN"
+
+
+
+  SPRING_DATASOURCE_URL: "jdbc:mysql://external-mysql:3307/st_cms?verifyServerCertificate=false&requireSSL=false"
+  SPRING_DATASOURCE_USERNAME: "app"
+  SPRING_DATA_REDIS_CLUSTER_NODES: "external-redis:7000"
+  SPRING_RABBITMQ_HOST: "external-rabbitmq"
+  SPRING_RABBITMQ_PORT: "5673"
+  SPRING_RABBITMQ_USERNAME: "namviet"
+  SPRING_ELASTICSEARCH_URIS: "http://external-elasticsearch:9201"
+  SPRING_ELASTICSEARCH_USERNAME: "cms"
+  CHAT_BOT_URL: "https://smtp.mobifone.ai/api/gpt"
+  CHAT_BOT_USERNAME: "nguyentathau"
